@@ -1,11 +1,6 @@
-# uws
+# react-boilerplate
 
-A React/markdown static-site-generated journal.
+A React boilerplate.
 
-Express grabs a markdown journal from Google Drive and converts it to JSON.
-
-React grabs the JSON data and builds the site.
-
-## Installation
-
-`install-peerdeps --dev eslint-config-airbnb`
+`npm install`
+`npm start`
