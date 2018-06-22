@@ -2,6 +2,7 @@
 
 A React boilerplate.
 
-`npm install`
-
-`npm start`
+* React
+* CSS modules
+* ESLint
+* Jest
