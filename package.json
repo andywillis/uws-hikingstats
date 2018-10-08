@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "build": "webpack --mode production",
+    "start": "node src/server.js",
+    "startdev": "webpack-dev-server --config ./webpack.config.js --mode development",
     "test": "jest"
   },
   "keywords": [],
@@ -32,10 +34,15 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "express": "^4.16.3",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react-dom": "^16.4.1",
+    "uuid": "^3.3.2"
   },
   "jest": {
     "rootDir": "./src"
-  }
+  },
+  "proxy": "http://localhost:3001"
 }
