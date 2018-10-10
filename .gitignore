@@ -1,5 +1,5 @@
 #auth token
-./credentials
+.credentials
 
 # Node build artifacts
 node_modules
