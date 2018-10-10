@@ -7,3 +7,5 @@ A React boilerplate.
 * ESLint
 * Jest
 * Express server (3001)
+
+Hot module replacement for React, Express running on nodemon.
