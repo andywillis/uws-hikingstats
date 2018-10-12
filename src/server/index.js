@@ -4,8 +4,8 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const compression = require('compression');
 
-const { authorise, getGPXList } = require('../server/auth');
-const getCredentials = require('../server/auth/getCredentials');
+const { authorise, getGPXList } = require('./auth');
+const getCredentials = require('./auth/getCredentials');
 
 const app = express();
 
@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(fixedPath));
 }
 
-function storeCredentials([ credentials, token ]) {
+function storeCredentials({ credentials, token }) {
   return new Promise((resolve) => {
     app.credentials = credentials;
     app.token = token;
@@ -28,6 +28,7 @@ function storeCredentials([ credentials, token ]) {
 
 function getGPX() {
   const { credentials, token } = app;
+  console.log(credentials, token);
   const query = '"1K12a4Shmg4sWbAstNPkRKM08bzQO9ix8" in parents';
   return new Promise((resolve) => {
     authorise({ credentials, token }, (authentication) => {
